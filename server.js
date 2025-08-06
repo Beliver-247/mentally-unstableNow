@@ -7,8 +7,8 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// 👇 Match the Choreo request path
-app.use('/unstablemind/sollara/v1.0', userRoutes);
+// Routes
+app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
